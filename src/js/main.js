@@ -20,4 +20,23 @@ $(document).ready(() => {
        prevEl: '.swiper-button-prev',
         },
     });
+
 })
+
+const filterCountry = document.querySelectorAll('.swiper-slide');
+
+const nav = document.querySelector('.nav__list')
+
+nav.addEventListener('click', event => {
+    if (event.target.tagName !== 'LI') return false;
+  
+    let filterClass = event.target.dataset['country'];
+      console.log(filterClass);
+  
+      filterCountry.forEach(elem => {
+          elem.classList.remove('hide');
+         if (!elem.classList.contains(filterClass) && filterClass!== 'All') {
+            elem.classList.add('hide');
+         }
+      });
+  });
