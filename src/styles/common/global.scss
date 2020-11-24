@@ -1,0 +1,37 @@
+@import "../../local_modules/normalize.css/normalize";
+
+@import "../../styles/utils/fonts";
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Golos Text", sans-serif;
+    background-color: #4f73cd;
+    color: #ffffff;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
