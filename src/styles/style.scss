@@ -52,22 +52,20 @@
     margin-top: 32px;
     height: 530px;
     margin-bottom: 134px;
-    // border: 1px solid red;
-    width: 1330px;
+    width: 1170px;
+    font-size: 0;
 
     &__wrapper {
-        width: 1330px;
+        width: 1170px;
+        height: 530px;
     }
 
-    .swiper-slide {}
-
     &__slide {
+        text-align: center;
         height: calc((100% - 30px) / 2);
         overflow: hidden;
         width: 170px !important;
-        // margin-left: 15px;
-        // margin-right: 15px;
-        //margin-bottom: 30px;
+        float: left;
     }
 
     &__image {
@@ -77,84 +75,99 @@
     img {
         max-width: 100%;
     }
+}
 
-    .swiper-button-next {
-        background-image: url(../img/arrow_right.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-            width: 40px;
-            height: 40px;
-            border-radius: 50px;
-       
+.hidden {
+display: none;
 
-        &::after {
-            display: none;
-        }
 
-        &:focus {
-            border: none;
-            outline: none;
-        }
+}
 
-        &:hover,:focus {
-            background-image: url(../img/arrow_right.svg);
-            background-repeat: no-repeat;    
-            background-color: #0047FF;
-            background-position: 50% 50%;
-            width: 40px;
-            height: 40px;
-            border-radius: 50px;
-        }
+.visuallyhidden {
+    /*animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;*/
+    opacity: 0;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    transition: 1s ease-in-out;
+  }
+
+/*
+@keyframes hide {
+    to {
+        opacity: 0;
+        min-height: 0;
+        min-width: 0;
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+}*/
+
+
+.swiper-button-next {
+    background-image: url(../img/arrow_right.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 85px;
+    right: -6px;
+
+
+    &::after {
+        display: none;
     }
 
-    .swiper-button-prev {
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    &:hover,
+    :focus {
+        background-image: url(../img/arrow_right.svg);
+        background-repeat: no-repeat;
+        background-color: #0047FF;
+        background-position: 50% 50%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+}
+
+.swiper-button-prev {
+    background-image: url(../img/arrow_left.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 85px;
+    margin-left: -10px;
+
+    &::after {
+        display: none;
+    }
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+    &:hover,
+    :focus {
         background-image: url(../img/arrow_left.svg);
         background-repeat: no-repeat;
         background-position: 50% 50%;
         width: 40px;
         height: 40px;
         border-radius: 50px;
-        
-        &::after {
-            display: none;
-        }
-
-        &:focus {
-            border: none;
-            outline: none;
-        }
-
-        &:hover,:focus {
-            background-image: url(../img/arrow_left.svg);
-            background-repeat: no-repeat;
-            background-position: 50% 50%;
-            width: 40px;
-            height: 40px;
-            border-radius: 50px;
-            background-color: #0047FF;
-        }
+        background-color: #0047FF;
     }
-
-
 }
-
-
-.hide {
-    opacity: 1;
-    animation-name: hide;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    //display: none;
-  }
-  
-  @keyframes hide{
-    to {
-          opacity: 0;
-          min-height: 0; 
-          min-width: 0;
-          padding: 0;
-          margin: 0;
-          border: 0;
-    }	
-  }
-  
